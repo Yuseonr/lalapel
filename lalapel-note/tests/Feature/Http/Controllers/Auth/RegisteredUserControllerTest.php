@@ -14,7 +14,7 @@ it('registers and authenticates a user with a UUID and user role', function () {
 
     $user = User::query()->where('email', 'rafi@example.com')->firstOrFail();
 
-    $response->assertRedirect(route('home'));
+    $response->assertRedirect(route('canvas'));
     $this->assertAuthenticatedAs($user);
     expect($user->id)->toBeUuid();
     expect($user->role)->toBe(UserRole::User);

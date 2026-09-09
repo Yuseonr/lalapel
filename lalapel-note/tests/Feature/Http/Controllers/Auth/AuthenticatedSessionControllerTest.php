@@ -15,7 +15,7 @@ it('authenticates a user with valid credentials', function () {
         'password' => 'password123',
     ]);
 
-    $response->assertRedirect(route('home'));
+    $response->assertRedirect(route('canvas'));
     $this->assertAuthenticatedAs($user);
 });
 
